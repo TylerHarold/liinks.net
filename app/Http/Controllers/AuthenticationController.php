@@ -103,4 +103,11 @@ class AuthenticationController extends Controller
 
         return redirect()->to('/u');
     }
+
+    public function userLogout() {
+        Auth::logout();
+
+        $this->viewParams['info'] = "You have been logged out.";
+        return view('/login')->with($this->viewParams);
+    }
 }

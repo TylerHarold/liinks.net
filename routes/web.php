@@ -22,6 +22,7 @@ Route::prefix('/')->group(function() {
     Route::post('/login', 'AuthenticationController@userLogin');
     Route::get('/register', 'Controller@register')->name('Register');
     Route::post('/register', 'AuthenticationController@createAccount');
+    Route::get('/logout', 'AuthenticationController@userLogout')->name('Logout');
 
     // About
     Route::get('/about', 'Controller@about')->name('About');
