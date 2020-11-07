@@ -1,0 +1,54 @@
+:root {
+  --primary: #86C232;
+  --primary-dark: #61892F;
+  --dark: #222629;
+  --dark-text: #474B4F;
+  --light-text: #6B6E70;
+}
+
+body {
+  background: var(--dark);
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+h1,
+h2 {
+  color: var(--primary);
+  margin: 10px 0px;
+  font-weight: 700;
+}
+
+h3,
+h4 {
+  color: #fff;
+  margin: 5px 0px;
+}
+
+h5,
+h6 {
+  color: #fff;
+  margin: 5px 0px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--primary-dark);
+}
+
+.btn-primary {
+  color: white !important;
+  background: var(--primary);
+  margin: 10px 0px;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
