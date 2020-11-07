@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row p-3">
         <div class="col-md-6 col-sm-12">
-            <img class="img-fluid" src="/img/logo.svg" style="height: 64px; width: auto;" />
+            <a href="/"><img class="img-fluid" src="/img/logo.svg" style="height: 64px; width: auto;" /></a>
         </div>
         <div class="col-md-6 col-sm-12 my-auto">
             <div align="right">

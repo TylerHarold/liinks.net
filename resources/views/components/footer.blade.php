@@ -13,10 +13,9 @@
             <div class="col-md-3 col-sm-12">
                 <div align="right">
                     <h2 style="font-weight: bold;">sitemap</h2>
-                    <a href="/signup">sign up</a><br>
+                    <a href="/register">sign up</a><br>
                     <a href="/login">login</a><br>
                     <a href="/about">about</a><br>
-                    <a href="/team">team</a><br>
                 </div>
             </div>
         </div>
