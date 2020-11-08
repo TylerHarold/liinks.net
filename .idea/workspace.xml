@@ -24,8 +24,8 @@
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/connect.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/connect.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/u.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/u.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +180,8 @@
       <workItem from="1604705354077" duration="5590000" />
       <workItem from="1604716555678" duration="7498000" />
       <workItem from="1604769211507" duration="9908000" />
-      <workItem from="1604806556688" duration="2686000" />
+      <workItem from="1604806556688" duration="3287000" />
+      <workItem from="1604858817297" duration="3995000" />
     </task>
     <servers />
   </component>

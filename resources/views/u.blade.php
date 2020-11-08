@@ -4,13 +4,15 @@
     <div class="container">
         <div class="row p-3">
             <div class="col-md-2 col-sm-12 my-auto">
-                <img src="/img/team/tyler.png" width="100%" />
+                @if($user->avatar_path != null)
+                    <img src="{{ $user->avatar_path }}" width="100%" />
+                @else
+                    <img src="/img/icons/discord.svg" width="100%" />
+                @endif
             </div>
             <div class="col-md-6 col-sm-12 my-auto">
                 <h1>
-                    @if(Auth::check())
-                        {{ $user->username }}
-                    @endif
+                    {{ $user->username }}
                 </h1>
                 <h4>Subtitle / Badges</h4>
             </div>

@@ -55,4 +55,12 @@ class Controller extends BaseController
         $this->viewParams['users'] = User::all();
         return view('connect')->with($this->viewParams);
     }
+
+    public function settings() {
+        if (!Auth::check()) {
+            $this->viewParams['error'] = "You need to be signed in to view this page";
+            return Redirect::to('/login')->with($this->viewParams);
+        }
+        return view('settings');
+    }
 }

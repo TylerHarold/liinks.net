@@ -13,7 +13,11 @@
                 <div class="col-3 connect-box">
                     <div class="row">
                         <div class="col-md-3 col-sm-12 my-auto">
-                            <img src="/img/team/tyler.png" style="width: 100%" />
+                            @if($user->avatar_path != null)
+                                <img src="{{ $user->avatar_path }}" width="100%" />
+                            @else
+                                <img src="/img/icons/discord.svg" width="100%" />
+                            @endif
                         </div>
                         <div class="col-md-9 col-sm-12 my-auto">
                             <h3 class="my-auto"><a href="/u/{{ $user->username }}">{{ $user->username }}</a></h3>

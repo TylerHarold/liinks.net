@@ -35,4 +35,10 @@ Route::prefix('/')->group(function() {
 
     // Connect
     Route::get('/connect', 'Controller@connect')->name('Connect');
+
+    // Settings
+    Route::prefix('/settings')->group(function() {
+       Route::get('/', 'Controller@settings')->name('Settings');
+       Route::post('/upload-avatar', 'UserController@setAvatar');
+    });
 });
