@@ -6,6 +6,7 @@
             <div class="col-md-6 col-sm-12">
                 <h1>how it started</h1>
                 <hr>
+                <br>
                 <h6>pfile was created by Tyler Harold in late 2020 with the intentions of making an "about me" page
                     easier for users without web development experience. with features like social media linking, soundcloud
                     link embedding, and the ability to create posts, it is an all around platform for gamers, artists, and

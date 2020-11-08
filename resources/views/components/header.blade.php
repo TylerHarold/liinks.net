@@ -8,18 +8,30 @@
                 <ul class="navbar-nav mr-auto nav-fill w-100">
                     <div class="container">
                         <div class="row">
-                            <li class="nav-item">
-                                <a class="nav-link" href="/">home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/connect">connect</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/servers">servers</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/u">profile</a>
-                            </li>
+                            @if(!Auth::check())
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/">home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/about">about</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/register">sign up</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/login">login</a>
+                                </li>
+                            @else
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/connect">connect</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/servers">servers</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/u">profile</a>
+                                </li>
+                            @endif
                         </div>
                     </div>
 

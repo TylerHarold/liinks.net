@@ -7,6 +7,12 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
+
+use App\Models\User;
+
 class Controller extends BaseController
 {
     public $viewParams;
@@ -25,5 +31,28 @@ class Controller extends BaseController
 
     public function about() {
         return view('about');
+    }
+
+    public function profile() {
+        if (Auth::check()) {
+            $this->viewParams['user'] = auth()->user();
+            return view('u')->with($this->viewParams);
+        } else {
+            $this->viewParams['error'] = "You need to be signed in to view this page";
+            return Redirect::to('/login')->with($this->viewParams);
+        }
+    }
+
+    public function otherProfile($username) {
+        $this->viewParams['user'] = User::where('username', $username)->first();
+        if (User::where('username', $username)->exists())
+            return view('u')->with($this->viewParams);
+        else
+            return Redirect::to('/u');
+    }
+
+    public function connect() {
+        $this->viewParams['users'] = User::all();
+        return view('connect')->with($this->viewParams);
     }
 }

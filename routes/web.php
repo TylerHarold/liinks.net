@@ -30,5 +30,9 @@ Route::prefix('/')->group(function() {
     // Profile
     Route::prefix('/u')->group(function() {
        Route::get('/', 'Controller@profile')->name('Profile');
+       Route::get('/{username}', 'Controller@otherProfile')->name('OtherProfile');
     });
+
+    // Connect
+    Route::get('/connect', 'Controller@connect')->name('Connect');
 });
