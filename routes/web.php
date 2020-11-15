@@ -40,5 +40,7 @@ Route::prefix('/')->group(function() {
     Route::prefix('/settings')->group(function() {
        Route::get('/', 'Controller@settings')->name('Settings');
        Route::post('/upload-avatar', 'UserController@setAvatar');
+       Route::post('/change-bio', 'UserController@setBio');
+       Route::post('/edit-links', 'UserController@setLinks');
     });
 });

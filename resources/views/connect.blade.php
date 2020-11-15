@@ -10,13 +10,13 @@
             </div>
             <br>
             @foreach($users as $user)
-                <div class="col-3 connect-box">
+                <div class="col-4 boxed-content">
                     <div class="row">
                         <div class="col-md-3 col-sm-12 my-auto">
                             @if($user->avatar_path != null)
                                 <img src="{{ $user->avatar_path }}" width="100%" />
                             @else
-                                <img src="/img/icons/discord.svg" width="100%" />
+                                <img src="/img/default.png" width="100%" />
                             @endif
                         </div>
                         <div class="col-md-9 col-sm-12 my-auto">

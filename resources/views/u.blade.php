@@ -7,7 +7,7 @@
                 @if($user->avatar_path != null)
                     <img src="{{ $user->avatar_path }}" width="100%" />
                 @else
-                    <img src="/img/icons/discord.svg" width="100%" />
+                    <img src="/img/default.png" width="100%" />
                 @endif
             </div>
             <div class="col-md-6 col-sm-12 my-auto">
@@ -47,7 +47,7 @@
         </div>
         <br>
         <div class="row p-3">
-            <div class="col-12">
+            <div class="col-12 boxed-content">
                 <h2>bio</h2>
                 <hr>
                 @if($user->bio != null)
@@ -56,6 +56,37 @@
                     <h5>This user has not set a bio.</h5>
                 @endif
             </div>
+        </div>
+        <br>
+        <div class="row p-3">
+            <div class="col-12 my-auto">
+                <h2>recent updates</h2>
+                @if(Request::segment(2) == null)
+                    <div class="btn btn-primary"><i class="fa fa-plus"></i> New Update</div>
+                @endif
+            </div>
+            @foreach($user->posts as $post)
+                <div class="col-12 boxed-content">
+                    <div class="row">
+                        <div class="col-md-1">
+                            @if($user->avatar_path != null)
+                                <img src="{{ $user->avatar_path }}" width="100%" />
+                            @else
+                                <img src="/img/default.png" width="100%" />
+                            @endif
+                        </div>
+                        <div class="col-md-11 my-auto">
+                            <h3>{{ $user->username }} <h6>{{ $post->created_at->diffForHumans() }}</h6></h3>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-12">
+                            <h6>{{ $post->post_body }}</h6>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
         </div>
     </div>
 @endsection

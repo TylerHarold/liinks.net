@@ -11,9 +11,9 @@
                 <form method="POST" action="/login">
                     {{ csrf_field() }}
                     <label for="email">Email Address</label>
-                    <input class="form-control mcph-input" id="email" name="email" type="email" placeholder="your@email.com" required />
+                    <input class="form-control" id="email" name="email" type="email" placeholder="your@email.com" required />
                     <label for="password">Password</label>
-                    <input class="form-control mcph-input" id="password" name="password" type="password" placeholder="Password..." required />
+                    <input class="form-control" id="password" name="password" type="password" placeholder="Password..." required />
                     <br>
                     <input type="submit" class="btn btn-login btn-primary btn-block" value="Login" />
                 </form>

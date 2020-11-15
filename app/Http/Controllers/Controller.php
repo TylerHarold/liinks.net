@@ -61,6 +61,7 @@ class Controller extends BaseController
             $this->viewParams['error'] = "You need to be signed in to view this page";
             return Redirect::to('/login')->with($this->viewParams);
         }
-        return view('settings');
+        $this->viewParams['user'] = auth()->user();
+        return view('settings')->with($this->viewParams);
     }
 }

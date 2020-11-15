@@ -13,9 +13,16 @@
             <div class="col-md-3 col-sm-12">
                 <div align="right">
                     <h2 style="font-weight: bold;">sitemap</h2>
-                    <a href="/register">sign up</a><br>
-                    <a href="/login">login</a><br>
-                    <a href="/about">about</a><br>
+                    @if(!Auth::check())
+                        <a href="/register">sign up</a><br>
+                        <a href="/login">login</a><br>
+                        <a href="/about">about</a><br>
+                    @else
+                        <a href="/about">about</a><br>
+                        <a href="/settings">settings</a><br>
+                        <a href="/updates">updates</a><br>
+                    @endif
+
                 </div>
             </div>
         </div>
