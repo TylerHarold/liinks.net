@@ -36,7 +36,7 @@
                     {{ csrf_field() }}
                     <label for="avatar">Change Bio</label>
                     <br>
-                    <textarea class="form-control" id="bio" name="bio" rows="2" style="width: 100%;"  maxlength="400"></textarea>
+                    <textarea class="form-control" id="bio" name="bio" rows="2" style="width: 100%;"  maxlength="400">{{ $user->bio }}</textarea>
                     <input type="submit" class="btn btn-primary" value="Change Bio" />
                 </form>
             </div>

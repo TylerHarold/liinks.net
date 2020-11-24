@@ -1,13 +1,14 @@
 :root {
-    --primary: #86C232;
-    --primary-dark: #61892F;
-    --dark: #222629;
-    --dark-text: #474B4F;
-    --light-text: #6B6E70;
+    --primary: #222629;
+    --secondary: #474B4F;
+    --neutral: #ecf0f1;
+    --contrast: #16a085;
+
+    --light: rgba(0, 0, 0, 0.1);
 }
 
 body {
-    background: var(--dark);
+    background: var(--neutral);
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
@@ -15,17 +16,19 @@ body {
 h1, h2 {
     color: var(--primary);
     margin: 10px 0px;
-    font-weight: 700;
+    font-weight: bolder;
 }
 
 h3, h4 {
-    color: #fff;
+    color: var(--secondary);
     margin: 5px 0px;
+    font-weight: bold;
 }
 
 h5, h6 {
-    color: #fff;
+    color: var(--secondary);
     margin: 5px 0px;
+    font-weight: bold;
 }
 
 a {
@@ -33,24 +36,29 @@ a {
     color: var(--primary);
 }
 
+p {
+    color: var(--secondary);
+}
+
 a:hover {
     text-decoration: none;
-    color: var(--primary-dark);
+    color: var(--contrast);
 }
 
 .btn-primary {
     color: white !important;
-    background: var(--primary);
+    font-weight: bold;
+    background: var(--contrast);
     margin: 10px 0px;
     border: none;
 }
 
 .btn-primary:hover {
-    background: var(--primary-dark);
+    background: var(--primary);
 }
 
 .boxed-content {
-    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--light);
     padding: 15px;
     margin: 10px;
     border-radius: 5px;

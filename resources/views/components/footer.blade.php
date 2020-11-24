@@ -5,7 +5,7 @@
         <div class="row p-3">
             <div class="col-md-9 col-sm-12">
                 <h2 style="font-weight: bold;">about pfile</h2>
-                <p class="text-white">
+                <p>
                     PFILE allows users of different interests the ability to create a customizable profile
                     to display their social medias, latest music, and provide updates to their community.
                 </p>

@@ -62,7 +62,7 @@
             <div class="col-12 my-auto">
                 <h2>recent updates</h2>
                 @if(Request::segment(2) == null)
-                    <div class="btn btn-primary"><i class="fa fa-plus"></i> New Update</div>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#createPost"><i class="fa fa-plus"></i> New Update</button>
                 @endif
             </div>
             @foreach($user->posts as $post)
@@ -87,6 +87,14 @@
                     </div>
                 </div>
             @endforeach
+
         </div>
     </div>
+
 @endsection
+
+<script>
+    $('#createPost').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
+</script>
