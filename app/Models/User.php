@@ -14,8 +14,11 @@ class User extends Authenticatable
     protected $table = "users";
 
     protected $fillable = [
-      'username', 'email', 'avatar_path', 'background_path', 'badges', 'discord', 'twitter', 'youtube', 'steam',
-        'bio', 'password'
+      'username', 'email', 'avatar_path', 'background_path', 'badges', 'links', 'bio', 'layout', 'password'
+    ];
+
+    protected $attributes = [
+        'layout' => 'default'
     ];
 
     protected $hidden = [

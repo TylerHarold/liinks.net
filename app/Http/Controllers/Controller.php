@@ -35,8 +35,11 @@ class Controller extends BaseController
 
     public function profile() {
         if (Auth::check()) {
-            $this->viewParams['user'] = auth()->user();
-            return view('u')->with($this->viewParams);
+            $user = auth()->user();
+            $this->viewParams['user'] = $user;
+            $this->viewParams['links'] = json_decode($user->links);
+
+            return view("user-layouts.{$user->layout}")->with($this->viewParams);
         } else {
             $this->viewParams['error'] = "You need to be signed in to view this page";
             return Redirect::to('/login')->with($this->viewParams);
@@ -44,9 +47,12 @@ class Controller extends BaseController
     }
 
     public function otherProfile($username) {
-        $this->viewParams['user'] = User::where('username', $username)->first();
+        $user = User::where('username', $username)->first();
+        $this->viewParams['user'] = $user;
+        $this->viewParams['links'] = json_decode($user->links);
+
         if (User::where('username', $username)->exists())
-            return view('u')->with($this->viewParams);
+            return view("user-layouts.{$user->layout}")->with($this->viewParams);
         else
             return Redirect::to('/u');
     }

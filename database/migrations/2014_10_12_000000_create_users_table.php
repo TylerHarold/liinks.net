@@ -20,10 +20,8 @@ class CreateUsersTable extends Migration
             $table->string('avatar_path')->nullable();
             $table->string('background_path')->nullable();
             $table->string('badges')->nullable();
-            $table->string('discord')->nullable();
-            $table->string('twitter')->nullable();
-            $table->string('youtube')->nullable();
-            $table->string('steam')->nullable();
+            $table->string('links')->nullable();
+            $table->string('layout');
             $table->text('bio')->nullable();
             $table->string('password');
             $table->rememberToken();

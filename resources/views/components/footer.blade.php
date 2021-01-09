@@ -4,9 +4,9 @@
     <div class="container">
         <div class="row p-3">
             <div class="col-md-9 col-sm-12">
-                <h2 style="font-weight: bold;">about pfile</h2>
+                <h2 style="font-weight: bold;">about liinks</h2>
                 <p>
-                    PFILE allows users of different interests the ability to create a customizable profile
+                    liinks allows users of different interests the ability to create a customizable profile
                     to display their social medias, latest music, and provide updates to their community.
                 </p>
             </div>

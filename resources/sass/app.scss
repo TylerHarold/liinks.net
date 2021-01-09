@@ -67,3 +67,9 @@ a:hover {
 label {
     color: white;
 }
+
+.boxed-link {
+    color: var(--secondary);
+    background: var(--neutral);
+    padding: 15px;
+}
