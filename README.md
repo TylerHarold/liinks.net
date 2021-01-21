@@ -1,2 +1,2 @@
-## liinks
-a hub for displaying your social medias, new music, and connecting with other people.
+## 🔗 Liinks.net
+Display links and automatically embed popular sites into your own customizable profile.
